@@ -17,7 +17,8 @@ namespace VendasWeb.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Vendas Web MVC App com C#";
+            ViewData["Desenvolvedor"] = "Moacyr";
 
             return View();
         }
