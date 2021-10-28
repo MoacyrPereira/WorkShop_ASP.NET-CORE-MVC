@@ -9,17 +9,25 @@ namespace VendasWeb.Models
     {
         public int Id { get; set; }
 
+
+        [Required(ErrorMessage = "{0} é obrigatório")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} deve ter entre {2} e {1} caracteres")]
         [Display(Name = "Nome")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "{0} é obrigatório")]
+        [EmailAddress(ErrorMessage = "Use um Email válido")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Display(Name = "Data de Aniversário")]
+        [Required(ErrorMessage = "{0} é obrigatório")]
+        [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime BirthDate { get; set; }
 
+        [Required(ErrorMessage = "{0} é obrigatório")]
+        [Range(100.0, 50000.0, ErrorMessage = "{0} deve ser maior que {1} e menor que {2}")]
         [Display(Name = "Salário Base")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double BaseSalary { get; set; }
