@@ -51,7 +51,7 @@ namespace VendasWeb.Services
                 _context.Update(obj);
                 _context.SaveChanges();
             }
-            catch (DbConcurrencyException e)
+            catch (DbUpdateConcurrencyException e)
             {
                 throw new DbConcurrencyException(e.Message);
             }

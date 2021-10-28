@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace VendasWeb.Services.Exceptions
 {
     public class NotFoundException : ApplicationException
