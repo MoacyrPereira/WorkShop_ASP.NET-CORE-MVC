@@ -41,11 +41,10 @@ namespace VendasWeb.Services
                 _context.Seller.Remove(obj);
                 await _context.SaveChangesAsync();
             }
-            catch(DbUpdateException e)
+            catch (DbUpdateException)
             {
-                throw new IntegrityException("O vendedor(a) não pode ser apagado, porque possui vendas em seu nome");
+                throw new IntegrityException("Can't delete seller because he/she has sales");
             }
-
         }
 
         public async Task UpdateAsync(Seller obj)

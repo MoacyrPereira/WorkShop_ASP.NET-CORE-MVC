@@ -1,7 +1,7 @@
 ﻿@model VendasWeb.Models.Seller
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -44,6 +44,6 @@
 </div>
 
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-default">Edit</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary" style="border-radius:10px">Editar</a> |
     <a asp-action="Index">Voltar a lista...</a>
 </div>

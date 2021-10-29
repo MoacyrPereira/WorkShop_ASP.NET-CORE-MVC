@@ -1,11 +1,11 @@
 ﻿@model VendasWeb.Models.ViewModels.ErrorViewModel
 @{
-    ViewData["Title"] = "Error";
+    ViewData["Title"] = "Erro";
 }
 
 <h1 class="text-danger">@ViewData["Title"].</h1>
 <h2 class="text-danger">Um Erro ocorreu na sua requisição.</h2>
-<h2 class="text-danger">@Model.Message</h2>
+<h2 class="text-danger">Não é possível excluir o vendedor porque ele / ela tem vendas</h2>
 
 @if (Model.ShowRequestId)
 {
